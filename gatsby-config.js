@@ -6,7 +6,7 @@ module.exports = {
     url: 'https://simonso.netlify.com',
     title: 'Blog by Simon So',
     subtitle:
-      'Cloud/DevOps Engineer',
+      'Cloud/DevOps Engineer @ Slalom Silicon Valley',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
