@@ -6,7 +6,7 @@ module.exports = {
     url: 'https://simonso.netlify.com',
     title: 'Blog by Simon So',
     subtitle:
-      'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+      'Cloud/DevOps Engineer',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
@@ -26,11 +26,9 @@ module.exports = {
     author: {
       name: 'Simon So',
       email: 'simon.so@gmail.com',
-      telegram: '#',
-      twitter: 'twitter.com/sosimon',
-      github: 'github.com/sosimon',
+      twitter: 'sosimon',
+      github: 'sosimon',
       rss: '#',
-      vk: '#',
     },
   },
   plugins: [
