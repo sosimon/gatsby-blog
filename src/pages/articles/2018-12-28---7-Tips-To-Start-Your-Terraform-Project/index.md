@@ -15,7 +15,7 @@ tags:
 description: "Lessons learned from writing Terraform for clients large and small."
 ---
 
-* This article was originally first published on [Medium](https://medium.com/@simon.so/7-tips-to-start-your-terraform-project-the-right-way-93d9b890721a) *
+_This article was originally first published on [Medium](https://medium.com/@simon.so/7-tips-to-start-your-terraform-project-the-right-way-93d9b890721a) _
 
 #Introduction
 
