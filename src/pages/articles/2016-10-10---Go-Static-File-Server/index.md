@@ -26,7 +26,7 @@ func main() {
 
 plus a scrach Docker container:
 
-```Docker
+```docker
 FROM scratch
 ADD main /
 
