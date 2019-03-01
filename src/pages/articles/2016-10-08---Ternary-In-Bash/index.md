@@ -1,5 +1,5 @@
 ---
-title: TIL: Ternary in Bash
+title: TIL - Ternary in Bash
 date: "2016-10-08T10:10:38-07:00"
 layout: post
 draft: false
