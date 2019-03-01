@@ -4,4 +4,4 @@ layout: page
 path: "/contact"
 ---
 
-[Email](mailto:simon.so@gmail.com) is the best way to contact me.
+[Email](mailto:simon.so@gmail.com) me!
