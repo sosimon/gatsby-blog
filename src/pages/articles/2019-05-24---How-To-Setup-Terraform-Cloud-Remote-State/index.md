@@ -23,15 +23,15 @@ Last week, Hashicorp answered some of these questions for us by releasing [Cloud
 # Step-by-Step
 Hashicorp’s own [demo video](https://www.youtube.com/watch?v=ZGl8wlxlcIU) does a great job of walking through the steps to set this up. But for those who prefer reading text over watching video, here are the steps and some color commentary:
 
-	1. Get Terraform (>0.11.13)
+## 1. Get Terraform (>0.11.13)
 
 Get the latest version of Terraform [here](https://www.terraform.io/downloads.html). Cloud Remote State is supported starting from version `0.11.13` and up. Keep in mind the highly-anticipated version `0.12` also was just released at roughly the same time last week and it contains backward-incompatible changes, so if you are working with existing, pre-`0.12` Terraform configs, it might be a good idea to just grab the last `0.11` release - `0.11.14` - from [here](https://releases.hashicorp.com/terraform/) for now and figure out the upgrade details separately. For new Terraform, skip “Go” and collect version `0.12`.
 
-	2. Create a Terraform Cloud account and an organization
+## 2. Create a Terraform Cloud account and an organization
 
 Go to app.terraform.io and create an account and an organization to hold your state files. From my experience, organization names need to be globally unique and the creation process will prompt you if an organization already exists.
 
-	3. Create a user token
+## 3. Create a user token
 
 Create a user token [here](https://app.terraform.io/app/settings/tokens). This step creates a token that is used to authenticate who or whatever is running Terraform with Terraform Cloud. The token should be put in a `.terraformrc` file in the user’s home directory.
 
@@ -42,11 +42,11 @@ credentials "app.terraform.io" {
 }
 ```
 
-	4. Run `terraform init/plan/apply` to ensure there are no pending changes
+## 4. Run `terraform init/plan/apply` to ensure there are no pending changes
 
 We will be migrating our state file so it’s a good idea to make sure everything is synced up before moving. One less thing to worry about.
 
-	5. Add or modify the remote backend definition
+## 5. Add or modify the remote backend definition
 
 The definition of your remote backend should look something like this:
 ``` hcl
@@ -62,7 +62,7 @@ terraform {
 }
 ```
 
-	6. Run `terraform init/plan` 
+## 6. Run `terraform init/plan` 
 
 When you run `terraform init`, you will be asked whether you want to copy your state file to the new remote backend.  
 ```
