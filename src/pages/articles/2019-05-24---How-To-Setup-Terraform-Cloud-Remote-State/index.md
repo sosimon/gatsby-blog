@@ -16,9 +16,9 @@ description: "Terraform Cloud Remote State Management is a new collaboration fea
 ---
 
 # Introduction
-Managing Terraform remote state files has always been an extra bit of hassle that required some pre-planning and fore-thought for all but maybe the smallest (one-person) teams. I wrote about why you should store your Terraform state remotely in a [previous post](https://www.simonso.dev/posts/7-tips-to-start-your-terraform-project) but there are still some key decisions to be made around “how”: which storage backend should you use? Does it support file locking or do you have to implement that yourself? How do you organize the state files across your team? Across your organization?
+Managing Terraform remote state files has always been an extra bit of hassle that requires some pre-planning and fore-thought for all but maybe the smallest (one-person) teams. Earlier, I wrote about why you should store your Terraform state remotely in a [previous post](https://www.simonso.dev/posts/7-tips-to-start-your-terraform-project) but there are still some key decisions to be made around “how”: which storage backend should you use? Does it support file locking or do you have to implement that yourself? How do you organize the state files across your team? Across your organization?
 
-Last week, Hashicorp answered some of these questions for us by releasing [Cloud Remote State Management](https://www.hashicorp.com/blog/introducing-terraform-cloud-remote-state-management) to all users, which means in a few easy steps, you and you team can can off-load the storage and management of your remote state files to Hashicorp’s cloud. This means you don’t have to provision and maintain your own infrastructure or create S3 or GCS buckets for your state files.
+This week, Hashicorp helped us answer some of these questions by releasing [Cloud Remote State Management](https://www.hashicorp.com/blog/introducing-terraform-cloud-remote-state-management) to all users, which means in a few easy steps, you and you team can can off-load the storage and management of your remote state files to Hashicorp’s cloud. This means you don’t have to provision and maintain your own infrastructure or create S3 or GCS buckets for your state files.
 
 # Step-by-Step
 Hashicorp’s own [demo video](https://www.youtube.com/watch?v=ZGl8wlxlcIU) does a great job of walking through the steps to set this up. But for those who prefer reading text over watching video, here are the steps and some color commentary:
@@ -29,13 +29,13 @@ Get the latest version of Terraform [here](https://www.terraform.io/downloads.ht
 
 ## 2. Create a Terraform Cloud account and an organization
 
-Go to app.terraform.io and create an account and an organization to hold your state files. From my experience, organization names need to be globally unique and the creation process will prompt you if an organization already exists.
+Go to [app.terraform.io](https://app.terraform.io) and create an account and an organization to hold your state files. From my experience, organization names need to be globally unique and the creation process will prompt you if an organization already exists.
 
 ## 3. Create a user token
 
 Create a user token [here](https://app.terraform.io/app/settings/tokens). This step creates a token that is used to authenticate who or whatever is running Terraform with Terraform Cloud. The token should be put in a `.terraformrc` file in the user’s home directory.
 
-~/.terraformrc
+~/.terraformrc:
 ``` hcl
 credentials "app.terraform.io" {
   token = "<insert user token here>"
