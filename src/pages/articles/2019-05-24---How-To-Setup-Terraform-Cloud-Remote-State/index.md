@@ -25,7 +25,7 @@ Hashicorp’s own [demo video](https://www.youtube.com/watch?v=ZGl8wlxlcIU) does
 
 ## 1. Get Terraform (>0.11.13)
 
-Get the latest version of Terraform [here](https://www.terraform.io/downloads.html). Cloud Remote State is supported starting from version `0.11.13` and up. Keep in mind the highly-anticipated version `0.12` also was just released at roughly the same time last week and it contains backward-incompatible changes, so if you are working with existing, pre-`0.12` Terraform configs, it might be a good idea to just grab the last `0.11` release - `0.11.14` - from [here](https://releases.hashicorp.com/terraform/) for now and figure out the upgrade details separately. For new Terraform, skip “Go” and collect version `0.12`.
+Get the latest version of Terraform [here](https://www.terraform.io/downloads.html). Cloud Remote State is supported starting from version 0.11.13 and up. Keep in mind the highly-anticipated version 0.12 also was just released at roughly the same time last week and it contains backward-incompatible changes, so if you are working with existing, pre-0.12 Terraform configs, it might be a good idea to just grab the last 0.11 release - 0.11.14 - from [here](https://releases.hashicorp.com/terraform/) for now and figure out the upgrade details separately. For new Terraform, skip “Go” and collect version 0.12.
 
 ## 2. Create a Terraform Cloud account and an organization
 
