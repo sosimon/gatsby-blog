@@ -4,9 +4,9 @@ const pxtorem = require('postcss-pxtorem')
 module.exports = {
   siteMetadata: {
     url: 'https://simonso.netlify.com',
-    title: 'Blog by Simon So',
+    title: 'A Blog by Simon So',
     subtitle:
-      'Cloud/DevOps Engineer @ Slalom Silicon Valley',
+      'Principal @ Slalom Build',
     copyright: '© All rights reserved.',
     disqusShortname: '',
     menu: [
